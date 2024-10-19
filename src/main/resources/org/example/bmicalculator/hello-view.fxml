@@ -1,16 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.bmicalculator.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.bmicalculator.BMIClass">
+   <children>
+      <Text fx:id="MainText" fill="#ff9f00" layoutX="250.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Calculate your BMI">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Text>
+      <TextField fx:id="fieldkg" layoutX="80.0" layoutY="237.0" promptText="(kg)" />
+      <TextField fx:id="fieldcm" layoutX="80.0" layoutY="156.0" promptText="(cm)" />
+      <Text fx:id="heightText" fill="#ff9f00" layoutX="80.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insert your height">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="weightText" fill="#ff9f00" layoutX="80.0" layoutY="232.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Insert your weight">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Button fx:id="CalculateButton" layoutX="80.0" layoutY="300.0" mnemonicParsing="false" onAction="#calculate" prefWidth="224.0" style="-fx-background-color: #2C17B1;" text="Calculate" textFill="#ffca00" />
+      <Text fx:id="BMIValueText" fill="#ff9f00" layoutX="80.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BMI Value:">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="StatusText" fill="#ff9f00" layoutX="81.0" layoutY="435.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status: ">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <TextField fx:id="fieldBMIValue" editable="false" layoutX="223.0" layoutY="365.0" />
+      <TextField fx:id="fieldStatus" editable="false" layoutX="223.0" layoutY="415.0" />
+      <Text fx:id="close" layoutX="766.0" layoutY="50.0" onMouseClicked="#close" strokeType="OUTSIDE" strokeWidth="0.0" text="X">
+         <font>
+            <Font size="33.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
+
+
